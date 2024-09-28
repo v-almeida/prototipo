@@ -128,3 +128,37 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+.html, body{
+    font-family: 'Poppins', sans-serif;
+    background-color: gray;
+}
+
+.menu {
+    display: flex; /* Faz com que os itens dentro do menu fiquem em uma linha */
+    justify-content: flex-start; /* Alinha o menu à esquerda */
+    margin-left: 0;
+}
+
+.menu_li{
+    margin-right: 20px; /* Espaçamento entre os itens do menu */
+    list-style: none; /* Remove os marcadores de lista */
+}
+
+.menu_link{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.clear {
+
+    clear: both;
+}
+
+.center {
+    width: 110px;
+    margin: 0 auto;
+}
+
