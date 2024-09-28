@@ -132,24 +132,30 @@ table {
 .html, body{
     font-family: 'Poppins', sans-serif;
     background-color: gray;
+    padding: 2%;
 }
 
 .menu {
-    display: flex; /* Faz com que os itens dentro do menu fiquem em uma linha */
-    justify-content: flex-start; /* Alinha o menu à esquerda */
+    display: flex; 
+    justify-content: flex-start; 
     margin-left: 0;
 }
 
 .menu_li{
-    margin-right: 20px; /* Espaçamento entre os itens do menu */
-    list-style: none; /* Remove os marcadores de lista */
+    margin-right: 20px; 
+    list-style: none; 
 }
 
 .menu_link{
+    display: inline-block;
     color: #ffffff;
     text-decoration: none;
     font-size: 14px;
     line-height: 16px;
+    padding: 10px 30px;
+    font-weight: 100;
+    font-size: 16px;
+    margin-left: 10px
 }
 
 .clear {
@@ -162,3 +168,28 @@ table {
     margin: 0 auto;
 }
 
+.bt-signin{
+    display: inline-block;
+    border: 1px solid #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    padding: 10px 30px;
+    border-radius: 4px;
+    white-space: nowrap;
+    margin-left: 30px;
+}
+
+.bt-signup{
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    background: #2F2B1E;
+    border-radius: 4px;
+    padding: 10px 30px;
+    color: #ffffff;
+    
+}
