@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Detalhes do Curso</title>
+</head>
+
+<body>
+    <div class="center">
+        <ul class="menu">
+            <li class="menu_li"><a href="index.html" class="menu_link">Home</a></li>
+            <li class="menu_li"><a href="courses.html" class="menu_link">Cursos</a></li>
+            <li class="menu_li"><a href="subscriptions.html" class="menu_link">Inscrições</a></li>
+            <li class="menu_li"><a href="contact.html" class="menu_link">Contato</a></li>
+            <li class="menu_li"><a href="signin.html" class="bt-signin">Login</a></li>
+            <li class="menu_li"><a href="signup.html" class="bt-signup">Registrar</a></li>
+        </ul>
+        <div class="clear"></div>
+
+        <h1>Curso de JavaScript</h1>
+        <p>Aprenda JavaScript do básico ao avançado. Este curso cobre tudo que você precisa para se tornar um
+            desenvolvedor web.</p>
+        <p><strong>Instrutor:</strong> João Silva</p>
+        <p><strong>Preço:</strong> R$ 199,00</p>
+        <button id="enroll-button">Inscreva-se agora</button>
+        <div id="feedback" class="feedback" style="display:none;"></div>
+    </div>
+    <script>
+        document.getElementById('enroll-button').addEventListener('click', function () {
+            document.getElementById('feedback').style.display = 'block';
+            document.getElementById('feedback').textContent = 'Inscrição realizada com sucesso!';
+            document.getElementById('feedback').style.color = 'green';
+            setTimeout(function () {
+                document.getElementById('feedback').style.display = 'none';
+            }, 3000);
+        });
+    </script>
+</body>
+
+</html>

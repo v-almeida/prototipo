@@ -1,195 +1,150 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
-}
-
 body {
-    line-height: 1;
-}
-
-ol,
-ul {
-    list-style: none;
-}
-
-blockquote,
-q {
-    quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: '';
-    content: none;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-.html, body{
     font-family: 'Poppins', sans-serif;
-    background-color: gray;
+    background-color: #f2f2f2;
+    /* Cor de fundo mais clara para contraste */
     padding: 2%;
 }
 
-.menu {
-    display: flex; 
-    justify-content: flex-start; 
-    margin-left: 0;
-}
-
-.menu_li{
-    margin-right: 20px; 
-    list-style: none; 
-}
-
-.menu_link{
-    display: inline-block;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 14px;
-    line-height: 16px;
-    padding: 10px 30px;
-    font-weight: 100;
-    font-size: 16px;
-    margin-left: 10px
-}
-
-.clear {
-
-    clear: both;
-}
-
 .center {
-    width: 110px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-.bt-signin{
-    display: inline-block;
-    border: 1px solid #ffffff;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 600;
-    color: #ffffff;
-    padding: 10px 30px;
-    border-radius: 4px;
-    white-space: nowrap;
-    margin-left: 30px;
+.menu {
+    display: flex;
+    justify-content: space-between;
+    /* Alinha os itens no menu */
+    background-color: #2F2B1E;
+    /* Cor de fundo do menu */
+    padding: 10px 20px;
+    /* Adiciona padding ao menu */
+    border-radius: 8px;
+    /* Bordas arredondadas */
 }
 
-.bt-signup{
+.menu_li {
+    list-style: none;
+}
+
+.menu_link,
+.bt-signin,
+.bt-signup {
     display: inline-block;
-    white-space: nowrap;
+    color: #ffffff;
     text-decoration: none;
     font-size: 16px;
+    line-height: 24px;
+    /* Aumenta a altura da linha para melhor legibilidade */
+    padding: 10px 20px;
+    /* Ajuste no padding */
     font-weight: 600;
-    background: #2F2B1E;
-    border-radius: 4px;
-    padding: 10px 30px;
-    color: #ffffff;
-    
+    /* Torna a fonte mais forte */
+    transition: background-color 0.3s, color 0.3s;
+    /* Transição suave */
+}
+
+.menu_link:hover,
+.bt-signin:hover,
+.bt-signup:hover {
+    background-color: #ffffff;
+    /* Hover effect */
+    color: #2F2B1E;
+    /* Muda a cor do texto no hover */
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #2F2B1E;
+    /* Cor do título */
+    font-size: 2.5em;
+    /* Aumenta o tamanho do título */
+}
+
+.course-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+    /* Espaçamento acima da lista de cursos */
+}
+
+.course-item {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    /* Bordas mais arredondadas */
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 calc(25% - 20px);
+    /* 4 cursos em uma linha */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra mais suave */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Transições suaves */
+}
+
+.course-item:hover {
+    transform: translateY(-5px);
+    /* Efeito de levitação ao passar o mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    /* Sombra mais intensa no hover */
+}
+
+.course-item a {
+    color: #2F2B1E;
+    /* Cor do link do curso */
+    text-decoration: none;
+    font-weight: 500;
+    /* Texto do link levemente mais forte */
+}
+
+.course-item a:hover {
+    text-decoration: underline;
+    color: #f57c00;
+    /* Cor do link ao passar o mouse */
+}
+
+.feedback {
+    margin-top: 15px;
+    font-size: 1.1em;
+    color: #555;
+    /* Cor da fonte do feedback */
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #2F2B1E;
+    /* Cor do botão */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    /* Transição suave */
+}
+
+button:hover {
+    background-color: #f57c00;
+    /* Cor do botão ao passar o mouse */
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .course-item {
+        flex: 1 1 calc(50% - 20px);
+        /* 2 cursos em uma linha */
+    }
+}
+
+@media (max-width: 480px) {
+    .course-item {
+        flex: 1 1 100%;
+        /* 1 curso em uma linha */
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
 }

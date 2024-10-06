@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="center">
+        <ul class="menu">
+            <li class="menu_li"><a href="index.html" class="menu_link">Home</a></li>
+            <li class="menu_li"><a href="courses.html" class="menu_link">Cursos</a></li>
+            <li class="menu_li"><a href="subscriptions.html" class="menu_link">Inscrições</a></li>
+            <li class="menu_li"><a href="contact.html" class="menu_link">Contato</a></li>
+            <li class="menu_li"><a href="signin.html" class="bt-signin">Login</a></li>
+            <li class="menu_li"><a href="signup.html" class="bt-signup">Registrar</a></li>
+        </ul>
+        <h1>Login do Usuário</h1>
+        <form id="signin-form">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+        <div id="signin-feedback" class="feedback" style="display:none;"></div>
+    </div>
+
+    <script>
+        document.getElementById('signin-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Verifica se o usuário existe
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            const user = users.find(user => user.email === email && user.password === password);
+
+            if (user) {
+                // Login bem-sucedido
+                alert(`Bem-vindo, ${user.name}!`);
+                // Redirecionar para a área do usuário ou outra página
+                window.location.href = 'subscriptions.html'; // Altere conforme necessário
+            } else {
+                // Login falhou
+                document.getElementById('signin-feedback').style.display = 'block';
+                document.getElementById('signin-feedback').textContent = 'E-mail ou senha incorretos.';
+                document.getElementById('signin-feedback').style.color = 'red';
+                setTimeout(() => {
+                    document.getElementById('signin-feedback').style.display = 'none';
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+
+</html>
